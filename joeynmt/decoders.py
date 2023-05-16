@@ -531,6 +531,9 @@ class TransformerDecoder(Decoder):
         ])
 
         self.pe = PositionalEncoding(hidden_size)
+
+        # Modifications to allow clean post- and pre-norm
+
         # self.layer_norm = (nn.LayerNorm(hidden_size, eps=1e-6) if kwargs.get(
         #     "layer_norm", "post") == "pre" else None)
 
